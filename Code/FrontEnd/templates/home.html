@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <header>
+    <h1 class="logo">Agromender</h1>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/plant">Plant</a></li>
+        <li><a href="/pest">Pest</a></li>
+        <li><a href="/fertilizers">Fertilizers</a></li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn" id="language-toggle" style ="margin-top:-5px;">LANGUAGE</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="changeLanguage('en')">English(US)</a>
+                <a href="#" onclick="changeLanguage('hi')">हिन्दी</a>
+                <a href="#" onclick="changeLanguage('mr')">मराठी</a>
+              
+            </div>
+            
+        </div>
+        </li>
+      </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+</header>
+</div>
+
+<section >
+    <div class="info">
+    <h1 class="italino-regular"  id='welcome-text'>~ Welcome To ~</h1>
+    <h1 class="roboto-heading" id='agromender'>AGROMENDER</h1>
+    <div class='intro-p'>
+    <p style="text-align:justify;"  id='intro-para'>
+      Welcome to Agromender! Uncover the secrets of your greenery with our integrated Plant Disease Detection, Pest Identification, and Pesticides Recommendation system. Effortlessly upload images for swift and accurate analysis, allowing you to diagnose diseases, identify pests, and receive personalized, eco-friendly pesticide recommendations. Nurture your plants with precision, making informed decisions for a thriving, healthy garden. Explore the synergy of technology and horticulture - your gateway to intelligent plant care!
+    </p>
+  </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <div class="imageContainer">
+    </div>
+    </div>
+</section>
+<br>
+<br>
+<div class='services'>
+  <h1 id='services-header'>Our Services</h1>
+  <hr>
+</div>
+
+<section class="articles">
+    
+    <article>
+      <div class="article-wrapper"style="text-align: justify;">
+        <figure>
+          <img src="https://media.istockphoto.com/id/658291850/photo/young-plant-growing-in-sunlight.webp?b=1&s=612x612&w=0&k=20&c=2GzCZo0bk2D4MI36gvrCke4CWa7J4qoh5Wfzy_f_pjs=" alt="" />
+        </figure>
+        <div class="article-body">
+          <h2 id='article-plant'>Plant Identification</h2>
+          <p id='article-para-plant'>
+            Welcome to our Plant Identification! Harnessing the power of cutting-edge technology, our platform offers an effortless way to identify and learn about the plants in your surroundings. Simply upload a photo, and our advanced algorithms will swiftly analyze key features, providing you with accurate and fascinating insights into the world of flora. Whether you're a seasoned botanist or a curious nature lover, embark on a seamless journey of discovery with us. 
+          </p>
+          <a href="/plant" class="read-more">
+            Read more <span class="sr-only">about this is some title</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article>
+  
+      <div class="article-wrapper"style="text-align: justify;">
+        <figure>
+          <img src="https://media.istockphoto.com/id/542328690/photo/colorado-beetle-eats-a-potato-leaves-young.jpg?s=612x612&w=0&k=20&c=m1LdxrR6L6N7F7yWW7RDacgMaiMzEx_IuvVlMPaCIZ4=" alt="" />
+        </figure>
+        <div class="article-body">
+          <h2 id='article-pest'>Pest Identification</h2>
+          <p id='article-para-pest'>
+            Introducing our Pest Identification Project – a groundbreaking tool to help you safeguard your environment. With a simple photo upload, our advanced algorithms swiftly analyze key characteristics, providing accurate identification of pests that may be affecting your surroundings. Whether you're a gardener, homeowner, or business owner, this platform empowers you to understand and address pest-related challenges effectively. Explore the world of pest identification effortlessly and take control of your space with knowledge and precision. 
+          </p>
+          <a href="/pest" class="read-more">
+            Read more <span class="sr-only">about this is some title</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article>
+  
+      <div class="article-wrapper" style="text-align: justify;">
+        <figure>
+          <img src="https://kaybeebio.com/wp-content/uploads/2023/05/why-the-use-of-bio-pesticides-is-the-best-step-forward-in-agriculture-in-2022.jpg" alt="" />
+        </figure>
+        <div class="article-body">
+          <h2 id='article-pesticide'>Pesticides Recommendation</h2>
+          <p id='article-para-pesticide'>
+            Welcome to our Pesticides Recommendation Project, where science meets sustainability for effective pest management. Our platform offers personalized recommendations for pesticides based on careful analysis of your specific pest issues. By considering factors such as pest type, location, and environmental impact, we provide targeted solutions to help you address challenges responsibly. Whether you're a farmer, gardener, or business owner, our goal is to empower you with effective and eco-friendly pest control strategies. Explore our recommendations to make informed choices that balance pest management with environmental stewardship. 
+          </p>
+          <a href="#" class="read-more">
+            Read more <span class="sr-only">about this is some title</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+  </section>
+  <br>
+  <br>
+  <footer>
+    &copy; 2023 AGROMENDER
+  </footer>
+  <script>
+    const welcomeText = document.getElementById('welcome-text');
+    const agro= document.getElementById('agromender');
+    const servicesHeader = document.getElementById('services-header');
+    const intopara=document.getElementById('intro-para');
+    const articleplant=document.getElementById('article-plant');
+    const articlepest=document.getElementById('article-pest');
+    const articlepesticide=document.getElementById('article-pesticide');
+    const articleparaplant=document.getElementById('article-para-plant');
+    const articleparapest=document.getElementById('article-para-pest');
+    const articleparapesticide=document.getElementById('article-para-pesticide');
+    
+    
+
+
+    // Define language data
+    const languages = {
+        'en': {
+            'Welcome to': 'Welcome to Agromender',
+            'Our Services': 'Our Services',
+            'intro para':' Welcome to Agromender! Uncover the secrets of your greenery with our integrated Plant Disease Detection, Pest Identification, and Pesticides Recommendation system. Effortlessly upload images for swift and accurate analysis, allowing you to diagnose diseases, identify pests, and receive personalized, eco-friendly pesticide recommendations. Nurture your plants with precision, making informed decisions for a thriving, healthy garden. Explore the synergy of technology and horticulture - your gateway to intelligent plant care!',
+            'articleplant':'Plant Disease Identification',
+            'articlepest':'Pest Identification',
+            'articlepesticide':'Pesticides Recommendation',
+            'articleparaplant':'Welcome to our Plant Identification! Harnessing the power of cutting-edge technology, our platform offers an effortless way to identify and learn about the plants in your surroundings. Simply upload a photo, and our advanced algorithms will swiftly analyze key features, providing you with accurate and fascinating insights into the world of flora. Whether youre a seasoned botanist or a curious nature lover, embark on a seamless journey of discovery with us.',
+            'articleparapest':' Introducing our Pest Identification Project – a groundbreaking tool to help you safeguard your environment. With a simple photo upload, our advanced algorithms swiftly analyze key characteristics, providing accurate identification of pests that may be affecting your surroundings. Whether youre a gardener, homeowner, or business owner, this platform empowers you to understand and address pest-related challenges effectively. Explore the world of pest identification effortlessly and take control of your space with knowledge and precision. ',
+            'articleparapesticide':' Welcome to our Pesticides Recommendation Project, where science meets sustainability for effective pest management. Our platform offers personalized recommendations for pesticides based on careful analysis of your specific pest issues. By considering factors such as pest type, location, and environmental impact, we provide targeted solutions to help you address challenges responsibly. Whether youre a farmer, gardener, or business owner, our goal is to empower you with effective and eco-friendly pest control strategies. Explore our recommendations to make informed choices that balance pest management with environmental stewardship. '
+            // Add more translations as needed
+        },
+        'es': {
+            'Welcome to Agromender!': '¡Bienvenido a Agromender!',
+            'Our Services': 'Nuestros Servicios'
+            // Add more translations as needed
+        },
+        'mr': {
+            'Welcome to': 'अग्रोमेंडरवर स्वागत आहे!',
+            'Our Services': 'आमची सेवा',
+            'intro para':'ॲग्रोमेन्डर मध्ये आपले स्वागत आहे! आमच्या एकात्मिक वनस्पती रोग शोध, कीटक ओळख आणि कीटकनाशक शिफारस प्रणालीसह तुमच्या हिरवाईचे रहस्य उलगडून दाखवा. जलद आणि अचूक विश्लेषणासाठी सहजतेने प्रतिमा अपलोड करा, ज्यामुळे तुम्हाला रोगांचे निदान करता येईल, कीटक ओळखता येतील आणि वैयक्तिकृत, पर्यावरणास अनुकूल कीटकनाशक शिफारसी मिळतील. भरभराटीच्या, निरोगी बागेसाठी माहितीपूर्ण निर्णय घेऊन आपल्या रोपांचे काटेकोरपणे संगोपन करा. तंत्रज्ञान आणि फलोत्पादनाचा समन्वय एक्सप्लोर करा - बुद्धिमान वनस्पती काळजीसाठी तुमचा प्रवेशद्वार!',
+            'articleplant':'वनस्पती रोग ओळख',
+            'articlepest':'कीटक ओळख',
+            'articlepesticide':'कीटकनाशकांची शिफारस',
+            'articleparaplant':'आमच्या वनस्पती ओळख मध्ये आपले स्वागत आहे! अत्याधुनिक तंत्रज्ञानाच्या सामर्थ्याचा उपयोग करून, आमचा प्लॅटफॉर्म तुमच्या सभोवतालच्या वनस्पती ओळखण्याचा आणि त्याबद्दल जाणून घेण्याचा एक सहज मार्ग प्रदान करतो. फक्त एक फोटो अपलोड करा आणि आमची प्रगत अल्गोरिदम त्वरीत प्रमुख वैशिष्ट्यांचे विश्लेषण करेल, तुम्हाला वनस्पतींच्या जगामध्ये अचूक आणि आकर्षक अंतर्दृष्टी प्रदान करेल. तुम्ही अनुभवी वनस्पतिशास्त्रज्ञ असाल किंवा जिज्ञासू निसर्गप्रेमी असाल, आमच्यासोबत शोधाचा अखंड प्रवास सुरू करा.',
+            'articleparapest':'तुम्हाला तुमच्या पर्यावरणाचे रक्षण करण्यात मदत करण्यासाठी आमच्या पेस्ट आयडेंटिफिकेशन हे ग्राउंडब्रेकिंग टूल सादर करत आहोत. एका साध्या फोटो अपलोडसह, आमचे प्रगत अल्गोरिदम आपल्या सभोवतालच्या परिसरावर परिणाम करणाऱ्या कीटकांची अचूक ओळख प्रदान करून मुख्य वैशिष्ट्यांचे द्रुतपणे विश्लेषण करतात. तुम्ही माळी, घरमालक किंवा व्यवसाय मालक असलात तरीही, हे प्लॅटफॉर्म तुम्हाला कीटक-संबंधित आव्हाने प्रभावीपणे समजून घेण्यास आणि त्यांचे निराकरण करण्यास सक्षम करते. कीटक ओळखण्याचे जग सहजतेने एक्सप्लोर करा आणि ज्ञान आणि अचूकतेने तुमच्या जागेवर नियंत्रण मिळवा.',
+            'articleparapesticide':'आमच्या कीटकनाशकांच्या शिफारसीमध्ये स्वागत आहे, जिथे विज्ञान प्रभावी कीटक व्यवस्थापनासाठी टिकाऊपणा पूर्ण करते. आमचे प्लॅटफॉर्म तुमच्या विशिष्ट कीटक समस्यांचे काळजीपूर्वक विश्लेषण करून कीटकनाशकांसाठी वैयक्तिक शिफारसी देते. कीटकांचे प्रकार, स्थान आणि पर्यावरणीय प्रभाव यासारख्या घटकांचा विचार करून, आम्ही तुम्हाला आव्हानांना जबाबदारीने सामोरे जाण्यास मदत करण्यासाठी लक्ष्यित उपाय प्रदान करतो. तुम्ही शेतकरी, माळी किंवा व्यवसायाचे मालक असलात तरीही, आमचे ध्येय तुम्हाला प्रभावी आणि पर्यावरणास अनुकूल कीटक नियंत्रण धोरणांसह सक्षम करणे हे आहे. माहितीपूर्ण निवडी करण्यासाठी आमच्या शिफारशी एक्सप्लोर करा ज्यात कीटक व्यवस्थापन पर्यावरणीय कारभारीपणासह संतुलित करा.'
+            // Add more translations as needed
+        },
+        'hi': {
+            'Welcome to': 'एग्रोमेंडर में आपका स्वागत है!',
+            'Our Services': 'हमारी सेवाएं',
+            'intro para':'एग्रोमेन्डर में आपका स्वागत है! हमारे एकीकृत पादप रोग जांच, कीट पहचान और कीटनाशक अनुशंसा प्रणाली के साथ अपनी हरियाली के रहस्यों को उजागर करें। त्वरित और सटीक विश्लेषण के लिए सहजता से छवियां अपलोड करें, जिससे आप बीमारियों का निदान कर सकते हैं, कीटों की पहचान कर सकते हैं और वैयक्तिकृत, पर्यावरण-अनुकूल कीटनाशक सिफारिशें प्राप्त कर सकते हैं। एक संपन्न, स्वस्थ बगीचे के लिए सोच-समझकर निर्णय लेते हुए, अपने पौधों का परिशुद्धता के साथ पोषण करें। प्रौद्योगिकी और बागवानी के तालमेल का अन्वेषण करें - बुद्धिमान पौधों की देखभाल के लिए आपका प्रवेश द्वार!',
+            'articleplant':'पादप रोग की पहचान',
+            'articlepest':'कीट की पहचान',
+            'articlepesticide':'कीटनाशकों की सिफ़ारिश',
+            'articleparaplant':'हमारे प्लांट आइडेंटिफिकेशन में आपका स्वागत है! अत्याधुनिक प्रौद्योगिकी की शक्ति का उपयोग करते हुए, हमारा मंच आपके आस-पास के पौधों को पहचानने और उनके बारे में जानने का एक आसान तरीका प्रदान करता है। बस एक फोटो अपलोड करें, और हमारे उन्नत एल्गोरिदम तेजी से प्रमुख विशेषताओं का विश्लेषण करेंगे, जो आपको वनस्पतियों की दुनिया में सटीक और आकर्षक अंतर्दृष्टि प्रदान करेंगे। चाहे आप एक अनुभवी वनस्पतिशास्त्री हों या जिज्ञासु प्रकृति प्रेमी हों, हमारे साथ खोज की एक निर्बाध यात्रा पर निकलें।',
+            'articleparapest':'आपके पर्यावरण को सुरक्षित रखने में आपकी मदद के लिए पेश है हमारा कीट पहचान एक अभूतपूर्व उपकरण। एक साधारण फोटो अपलोड के साथ, हमारे उन्नत एल्गोरिदम प्रमुख विशेषताओं का तेजी से विश्लेषण करते हैं, जो आपके परिवेश को प्रभावित करने वाले कीटों की सटीक पहचान प्रदान करते हैं। चाहे आप माली हों, गृहस्वामी हों, या व्यवसाय के स्वामी हों, यह मंच आपको कीट-संबंधी चुनौतियों को प्रभावी ढंग से समझने और उनका समाधान करने में सक्षम बनाता है। कीटों की पहचान की दुनिया का सहजता से अन्वेषण करें और ज्ञान और सटीकता के साथ अपने स्थान पर नियंत्रण रखें।',
+            'articleparapesticide':'हमारी कीटनाशक अनुशंसा में आपका स्वागत है, जहां विज्ञान प्रभावी कीट प्रबंधन के लिए स्थिरता को पूरा करता है। हमारा मंच आपके विशिष्ट कीट मुद्दों के सावधानीपूर्वक विश्लेषण के आधार पर कीटनाशकों के लिए व्यक्तिगत सिफारिशें प्रदान करता है। कीट के प्रकार, स्थान और पर्यावरणीय प्रभाव जैसे कारकों पर विचार करके, हम आपको चुनौतियों का जिम्मेदारी से समाधान करने में मदद करने के लिए लक्षित समाधान प्रदान करते हैं। चाहे आप किसान हों, माली हों, या व्यवसाय के स्वामी हों, हमारा लक्ष्य आपको प्रभावी और पर्यावरण-अनुकूल कीट नियंत्रण रणनीतियों के साथ सशक्त बनाना है। पर्यावरणीय प्रबंधन के साथ कीट प्रबंधन को संतुलित करने वाले सूचित विकल्प चुनने के लिए हमारी सिफारिशों का अन्वेषण करें।'
+            // Add more translations as needed
+        }
+        // Add more languages as needed
+    };
+
+    // Set initial language
+    let currentLanguage = 'en';
+
+    // Function to change language
+    function changeLanguage(lang) {
+        currentLanguage = lang;
+        welcomeText.textContent = languages[lang]['Welcome to'];
+        servicesHeader.textContent = languages[lang]['Our Services'];
+        agro.textContent=''
+        intopara.textContent = languages[lang]['intro para'];
+        articleplant.textContent = languages[lang]['articleplant'];
+        articlepest.textContent = languages[lang]['articlepest'];
+        articlepesticide.textContent = languages[lang]['articlepesticide'];
+        articleparaplant.textContent = languages[lang]['articleparaplant'];
+        articleparapest.textContent = languages[lang]['articleparapest'];
+        articleparapesticide.textContent = languages[lang]['articleparapesticide'];
+        adjustFontSize(); 
+        // Add more elements to translate as needed
+    }
+    function adjustFontSize() {
+      const welcomeText = document.getElementById('welcome-text');
+      if (currentLanguage === 'es') {
+          welcomeText.style.fontSize = '20px'; // Adjust font size for Spanish
+          intropara.style.fontSize='200px'
+      } else if (currentLanguage === 'mr'){
+          welcomeText.style.fontSize = '40px'; // Default font size
+          welcomeText.style.color = 'darkgoldenrod';
+          welcomeText.style.marginRight = '10px';
+          servicesHeader.style.fontSize = '40px'; 
+          intopara.style.fontSize = '20px'; 
+          
+         
+          
+
+      }
+      else{
+        welcomeText.style.fontSize = '40px'; // Default font size
+        welcomeText.style.color = 'darkgoldenrod';
+        servicesHeader.style.fontSize = '40px'; 
+        intopara.style.fontSize = '20px'; 
+      }
+  }
+
+
+</script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Identification and Detection - Home</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a>Your Plant Health</a>
+            </div>
+            <ul>
+                <li><a href="/" id="home-link" class="{{ 'active' if active_page == 'home' else '' }}">HOME</a></li>
+                <li><a href="/plant" id="plant">PLANT</a></li>
+                <li><a href="/pest" id="pest">PEST</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Welcome to the Home Page</h2>
+       
+    </section>
+
+    
+</body>
+</html>
+
+
+
+
+ -->

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Identification and Detection</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles1.css">
+    
+</head>
+<body>
+    <div class="header">
+        <header>
+        <h1 class="logo">Agromender</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/plant">Plant</a></li>
+            <li><a href="/pest">Pest</a></li>
+            <li><a href="/fertilizers">Fertilizers</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn" id="language-toggle" style ="margin-top:-5px;">LANGUAGE</button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="changeLanguage('en')">English(US)</a>
+                        <a href="#" onclick="changeLanguage('hi')">हिन्दी</a>
+                        <a href="#" onclick="changeLanguage('mr')">मराठी</a>
+                        
+                    </div>
+                    
+                </div>
+            </li>
+          </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+    </header>
+    </div>
+    <section>
+        <form id="plantForm">
+            <label for="image" id='upload'>Upload Plant Image</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+            
+            <button class='button' id='identify' type="button" onclick="submitForm()">Identify and Detect</button>
+        </form>
+
+        <div class="result-container">
+            <!-- Display identification result -->
+            <div class="result-section" id="identificationResult"><!DOCTYPE html>
+                
+                
+                <p id='ir'>Identification Result:</p>
+                <div id="identificationResultContent"></div>
+                <img id="identificationImage" >
+            </div>
+
+            <!-- Display detection result -->
+            <div class="result-section" id="detectionResult">
+                <p id='dr'>Detection Result:</p>
+                <!-- Content will be added dynamically through JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <script src="/static/plant.js"></script>
+    <footer>
+        &copy; 2023 AGROMENDER
+    </footer>
+</body>
+</html>

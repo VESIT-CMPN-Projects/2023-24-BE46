@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <title>Plant Identification and Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], select {
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .fertilizer-image {
+            height: 250px;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <header>
+        <h1 class="logo">Agromender</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/plant">Plant</a></li>
+            <li><a href="/pest">Pest</a></li>
+            <li><a href="/fertilizers">Fertilizers</a></li>
+            <li>
+              <div class="dropdown">
+                <button class="dropbtn" id="language-toggle" style ="margin-top:-5px;">LANGUAGE</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="changeLanguage('en')">English(US)</a>
+                    <a href="#" onclick="changeLanguage('hi')">हिन्दी</a>
+                    <a href="#" onclick="changeLanguage('mr')">मराठी</a>
+                  
+                </div>
+                
+            </div>
+            </li>
+          </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+    </header>
+    </div>
+    <div class="container">
+        <h1>Fertilizer Prediction</h1>
+        <form id="prediction-form">
+            <label for="temperature">Temperature:</label>
+            <input type="number" id="temperature" name="temperature" required>
+            <label for="humidity">Humidity:</label>
+            <input type="number" id="humidity" name="humidity" required>
+            <label for="moisture">Moisture:</label>
+            <input type="number" id="moisture" name="moisture" required>
+            <label for="soilType">Soil Type:</label>
+            <select id="soilType" name="soilType" required>
+                <option value="Sandy">Sandy</option>
+                <option value="Loamy">Loamy</option>
+                <option value="Black">Black</option>
+                <option value="Clayey">Clayey</option>
+            </select>
+            <label for="nitrogen">Nitrogen:</label>
+            <input type="number" id="nitrogen" name="nitrogen" required>
+            <label for="potassium">Potassium:</label>
+            <input type="number" id="potassium" name="potassium" required>
+            <label for="phosphorous">Phosphorous:</label>
+            <input type="number" id="phosphorous" name="phosphorous" required>
+            <input type="submit" value="Predict">
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById("prediction-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let form = event.target;
+            let formData = new FormData(form);
+            fetch("/fertilizers", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                let resultDiv = document.getElementById("result");
+                resultDiv.innerHTML = "<p>Predicted Fertilizer Name: " + data.predicted_fertilizer+ "</p>";
+                resultDiv.innerHTML += "<img class='fertilizer-image' src='" + data.image_url + "' alt='" + data.prediction + "'>";
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        });
+    </script>
+</body>
+</html>
