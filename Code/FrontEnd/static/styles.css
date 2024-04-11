@@ -1,0 +1,565 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+p{
+  align-items: justify;
+}
+.header {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.5551470588235294) 33%, rgba(0,0,0,1) 100%);
+  background-color: black;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  height: 80px;
+
+}
+header {
+background: var(--background);
+
+text-align: center;
+
+z-index: 1;
+width: 100%;
+}
+
+
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+/* changed this from the tutorial video to
+   allow it to gain focus, making it tabbable */
+   .nav-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+    outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    position: fixed;
+    text-align: left;
+    top: 0;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    display: flex;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+    padding-bottom: 2em;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: darkgoldenrod;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+
+    .logo {
+        grid-column: 2 / 3;
+        color: darkgoldenrod;
+        font-family: "Italianno", cursive;
+        font-weight: 400;
+        font-size: 40px;
+        font-style: normal;
+        margin-top: 0;
+        
+      }
+
+    nav {
+        position: relative;
+        text-align: left;
+        transition: none;
+        transform: scale(1, 1);
+        background: none;
+        top: initial;
+        left: initial;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: darkgoldenrod;
+        position: absolute;
+        top: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        transform: scale(1, 1);
+    }
+}
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  
+  .logo {
+    grid-column: 2 / 3;
+    color: darkgoldenrod;
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
+    margin-top: 0;
+    
+  }
+  
+  nav {
+    /* this causes issues with Edge, since it's unsupported */
+    
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end Edge support stuff */
+    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: darkgoldenrod;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+}
+
+
+.italino-regular{
+  font-family: "Italianno", cursive;
+font-weight: 400;
+font-size: 60px;
+font-style: normal;
+
+}
+
+
+.roboto-heading{
+  /* font-family: "Roboto Slab", serif; */
+font-family: "Italianno";
+font-optical-sizing: auto;
+font-weight: 500;
+font-size: 30px;
+font-style: normal;
+color: darkgoldenrod;
+}
+.intro-p{
+width:500px;
+height:200px;
+/* margin-left: 450px;
+margin-right: 70px; */
+margin: auto;
+font-family: "Italianno";
+font-optical-sizing: auto;
+font-weight: 100;
+font-size: 24.5px;
+font-style: normal;
+/* color: darkgoldenrod; */
+}
+.info {
+  /* max-width: 800px; */
+  /* margin: 2em auto; */
+  padding: 1em;
+  background-color: #333;
+  color: white;
+  z-index: -1;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+
+position: relative;
+height: 500px;
+
+background-image: url("http://stuffpoint.com/sea-and-beach/image/27652-sea-and-beach-summer.jpg");
+background-repaet: no-repeat;
+background-size: cover;
+  /* border-radius: 8px; */
+}
+/* .imageContainer{
+  position: relative;
+  width: 600px;
+  top: -90px;
+  background: black;
+  height: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-image: url("https://www.obhanandassociates.com/blog/wp-content/uploads/2019/08/dna.jpg");
+  background-position: center;
+  background-size: cover;
+  border: 4px solid #333;
+} */
+.services{
+margin-left: 60px;
+color: darkgoldenrod;
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
+    margin-top: 0;
+}
+
+article {
+  --img-scale: 1.001;
+  --title-color: black;
+  --link-icon-translate: -20px;
+  --link-icon-opacity: 0;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: none;
+  background: #fff;
+  transform-origin: center;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+article a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  cursor: pointer;
+  content: "";
+}
+
+/* basic article elements styling */
+article h2 {
+  margin: 0 0 18px 0;
+  text-align: center;
+  color: darkgoldenrod;
+  font-family: "Italianno", cursive;
+  font-size: 2.5rem;
+  letter-spacing: 0.06em;
+  /* color: var(--title-color); */
+  transition: color 0.3s ease-out;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+article img {
+  max-width: 100%;
+  transform-origin: center;
+  transform: scale(var(--img-scale));
+  transition: transform 0.4s ease-in-out;
+}
+
+.article-body {
+  padding: 24px;
+}
+
+article a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #28666e;
+}
+
+article a:focus {
+  outline: 1px dotted #28666e;
+}
+
+article a .icon {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
+}
+
+/* using the has() relational pseudo selector to update our custom properties */
+article:has(:hover, :focus) {
+  --img-scale: 1.1;
+  --title-color: #28666e;
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+
+/************************ 
+Generic layout (demo looks)
+**************************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* body {
+  margin: 0;
+  padding: 48px 0;
+  font-family: "Figtree", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  background-image: linear-gradient(45deg, #7c9885, #b5b682);
+  min-height: 100vh;
+}
+ */
+.articles {
+  display: grid;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin-top: 100px;
+height: 800px;
+position: relative;
+  /* background-color: gray; */
+}
+
+@media screen and (max-width: 960px) {
+  article {
+    container: card/inline-size;
+  }
+  .article-body p {
+    display: none;
+  }
+}
+
+@container card (min-width: 380px) {
+  .article-wrapper {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+  }
+  .article-body {
+    padding-left: 0;
+  }
+  figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  figure img {
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+.dropdown {
+  /* margin-top: 3px; */
+  float: left;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 1.2rem;
+  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 5px 14px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+/* .navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+ */
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  z-index: 2;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
